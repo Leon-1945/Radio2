@@ -165,6 +165,16 @@ public class Radio2Test {
     @Test
     public void testvolum8() {
         Radio2 radio = new Radio2();
+        radio.setCurrentVolume(11);
+
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void testvolum9() {
+        Radio2 radio = new Radio2();
         radio.setCurrentVolume(5);
 
         radio.increaseVolume();
